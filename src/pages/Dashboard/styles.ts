@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import { shade } from 'polished';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface FormProps {
   hasError: boolean;
 }
@@ -19,6 +20,15 @@ export const Form = styled.form<FormProps>`
   max-width: 700px;
 
   display: flex;
+  flex-direction: column;
+
+  > P {
+    margin-bottom: 8px;
+  }
+
+  .input-area {
+    display: flex;
+  }
 
   input {
     flex: 1;
@@ -53,6 +63,12 @@ export const Form = styled.form<FormProps>`
 
     &:hover {
       background: ${shade(0.2, '#04d361')};
+    }
+  }
+
+  @media (max-width: 500px) {
+    button {
+      width: 120px;
     }
   }
 `;

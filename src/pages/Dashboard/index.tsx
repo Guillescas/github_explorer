@@ -45,7 +45,7 @@ const Dashboard: React.FC = () => {
     event.preventDefault();
 
     if (!newRepo) {
-      setInputError('Digite o autor/nome do repositório');
+      setInputError('Digite o autor/nome-do-repositório');
       return;
     }
 
@@ -67,12 +67,17 @@ const Dashboard: React.FC = () => {
       <Title>Explore repositórios no Github</Title>
 
       <Form hasError={!!inputError} onSubmit={handleAddRepository}>
-        <input
-          value={newRepo}
-          onChange={e => setNewRepo(e.target.value)}
-          placeholder="username/reponame - Exemplo: Facebook/react"
-        />
-        <button type="submit">Pesquisar</button>
+        <p>
+          Digite: <strong>nome-do-usuário-do-GitHub/Nome-do-repositório</strong>
+        </p>
+        <div className="input-area">
+          <input
+            value={newRepo}
+            onChange={e => setNewRepo(e.target.value)}
+            placeholder="Ex: Facebook/react"
+          />
+          <button type="submit">Pesquisar</button>
+        </div>
       </Form>
 
       {inputError && <Error>{inputError}</Error>}

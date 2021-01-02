@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import px2vw from '../../utils/px2vw';
 
 export const Header = styled.header`
   display: flex;
@@ -77,6 +78,8 @@ export const RepositoryInfo = styled.section`
 `;
 
 export const Issues = styled.div`
+  width: ${px2vw(1000)};
+  max-width: 920px;
   margin-top: 80px;
 
   a {
@@ -119,5 +122,25 @@ export const Issues = styled.div`
       margin-left: auto;
       color: #cbcbd6;
     }
+  }
+
+  @media (max-width: 1150px) {
+    width: ${px2vw(1250)};
+  }
+
+  @media (max-width: 460px) {
+    width: ${px2vw(1300)};
+  }
+
+  @media (max-width: 415px) {
+    width: ${px2vw(1340)};
+  }
+
+  @media (max-width: 385px) {
+    width: ${px2vw(1345)};
+  }
+
+  @media (max-width: 310px) {
+    width: ${px2vw(1336)};
   }
 `;
