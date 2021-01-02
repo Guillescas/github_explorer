@@ -71,20 +71,20 @@ const Repository: React.FC = () => {
             </div>
           </header>
 
-          <ul>
-            <li>
+          <div className="repo-numbers">
+            <div className="repo-number">
               <strong>{repository.stargazers_count}</strong>
               <span>Stars</span>
-            </li>
-            <li>
+            </div>
+            <div className="repo-number">
               <strong>{repository.forks_count}</strong>
               <span>Forks</span>
-            </li>
-            <li>
+            </div>
+            <div className="repo-number">
               <strong>{repository.open_issues_count}</strong>
               <span>Issues abertas</span>
-            </li>
-          </ul>
+            </div>
+          </div>
         </RepositoryInfo>
       )}
 

@@ -50,28 +50,45 @@ export const RepositoryInfo = styled.section`
         margin-top: 4px;
       }
     }
-  }
 
-  ul {
-    display: flex;
-    list-style: none;
-    margin-top: 40px;
-
-    li {
-      & + li {
-        margin-left: 80px;
-      }
+    @media (max-width: 440px) {
+      flex-direction: column;
 
       strong {
-        display: block;
-        font-size: 36px;
-        color: #3d3d4d;
+        margin-top: 16px;
       }
+    }
+  }
 
-      span {
-        display: block;
-        margin-top: 4px;
-        color: #6c6c80;
+  .repo-numbers {
+    display: flex;
+    margin-top: 32px;
+
+    strong {
+      display: block;
+      font-size: 36px;
+      color: #3d3d4d;
+    }
+
+    span {
+      display: block;
+      margin-top: 4px;
+      color: #6c6c80;
+    }
+
+    .repo-number {
+      margin-right: 40px;
+    }
+
+    @media (max-width: 440px) {
+      flex-direction: column;
+
+      .repo-number {
+        margin-top: 16px;
+
+        span {
+          margin-top: 0;
+        }
       }
     }
   }
