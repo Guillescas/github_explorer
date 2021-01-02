@@ -49,6 +49,10 @@ export const RepositoryInfo = styled.section`
         color: #737380;
         margin-top: 4px;
       }
+
+      @media (max-width: 440px) {
+        margin-left: 0;
+      }
     }
 
     @media (max-width: 440px) {
